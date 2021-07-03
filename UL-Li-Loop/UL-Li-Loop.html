@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // انشاء قائمة واضافة عناصر داخلها
+        var ul = document.createElement("ul");
+        document.body.appendChild(ul);
+
+        for (var i = 1; i <= 10; i++) {
+
+            var li = document.createElement("li");  
+            
+            ul.appendChild(li);
+        }
+        //  انشاء قائمة واضافة عناصر داخلها واضافة مرساة داخل اللست
+        var ul = document.createElement("ul");
+        document.body.appendChild(ul);
+
+        for (var i = 1; i <= 10; i++)
+        {
+            var li = document.createElement("li");  
+            li.className = "file";
+
+            var a = document.createElement("a");
+            a.innerHTML = "Subfile " + i;
+
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>

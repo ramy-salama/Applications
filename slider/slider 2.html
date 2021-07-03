@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider2</title>
+    <style>
+        #slider {
+            position: relative;
+            z-index: 2;
+        }
+
+        #mainNews {
+            background-color: #5d5d5d;
+            float: right;
+            width: 400px;
+        }
+
+        .newsInfo {
+            border: 2px solid #000;
+            display: none;
+            float: right;
+            margin: 8px;
+            width: 384px;
+        }
+
+        .newsInfo .image {
+            height: 250px;
+            width: 380px;
+        }
+
+        .newsInfo .image img {
+            height: 250px;
+            width: 385px;
+        }
+
+        .newsInfo .label1 {
+            background-color: rgb(53, 49, 252);
+            border-top: 2px solid rgb(58, 54, 54);
+            height: 55px;
+            padding: 5px;
+            width: 380px;
+        }
+
+        .newsInfo .label1 a {
+            display: block;
+            height: 48px;
+            margin: 0 5px;
+            overflow: hidden;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 14px;
+            text-align: justify;
+            text-decoration: none;
+        }
+
+        #subNews {
+            float: right;
+            height: 287px;
+            width: 220px;
+        }
+
+        .top-0 {
+            margin-top: 0px !important;
+        }
+
+        .newsLinks {
+            cursor: pointer;
+            background-color: #444;
+            background-image: url("https://img.youm7.com/images/general/mainNewsLinksBg.gif?1");
+            background-position: right top;
+            /* background-repeat: repeat-y; */
+            border-color: #3b3a3a -moz-use-text-color #3b3a3a #3b3a3a;
+            /* border-image: none; */
+            border-style: solid none solid solid;
+            border-width: 2px medium 2px 2px;
+            height: 61px;
+            margin: 5px -5px;
+            width: 230px;
+        }
+
+        .newsLinks h4,
+        .newsLinks h3 {
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 21px;
+            text-align: right;
+            padding-left: 5px;
+            text-decoration: none;
+            display: block;
+            height: 42px;
+            line-height: 19px;
+            margin: 20px -30px;
+            overflow: hidden;
+            width: 225px;
+        }
+
+        .newsLinks.selected {
+            background-color: rgb(53, 49, 252);
+            background-image: url("https://img.youm7.com/images/general/mainNewsLinksSBg.gif?1");
+            border-color: rgb(53, 49, 252);
+            border-width: 2px medium 2px 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="display-width">
+        <div id="slider">
+            <div id="mainNews">
+                <div class="newsInfo" id="news1">
+                    <div class="image">
+                        <a href="###">
+                            <img src="file:///D:/Programming/2-Applications/slider/image/life.png"
+                                data-src="file:///D:/Programming/2-Applications/slider/image/logo.png" alt="Tom Clancy"
+                                title="Tom Clancy" />
+                        </a>
+                    </div>
+                    <div class="label1">
+                        <h3>
+                            <a href="###">
+                                Life is about learning; when you stop learning, you die.
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="newsInfo" id="news2">
+                    <div class="image">
+                        <a href="###">
+                            <img src="file:///D:/Programming/2-Applications/slider/image/Naval.png"
+                                data-src="file:///D:/Programming/2-Applications/slider/image/logo.png" alt="Naval"
+                                title="Naval" />
+                        </a>
+                    </div>
+                    <div class="label1">
+                        <h3>
+                            <a
+                                href="/story/2021/4/7/الكهرباء-تعلن-مد-مهلة-تلقى-طلبات-تركيب-العدادات-الكودية-حتى/5272674">
+                                Sing the song that only you can sing, write the book that only you can write, build the
+                                product that only you can build… live the life that only you can live
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="newsInfo" id="news3">
+                    <div class="image">
+                        <a href="###">
+                            <img src="file:///D:/Programming/2-Applications/slider/image/Operah.png"
+                                data-src="file:///D:/Programming/2-Applications/slider/image/logo.png" alt="Operah"
+                                title="Operah" />
+                        </a>
+                    </div>
+                    <div class="label1">
+                        <h3>
+                            <a href="/story/2021/4/7/الملك-محمد-منير-فى-أجرأ-حوار-على-تليفزيون-اليوم-السابع/5272660">
+                                It doesn't matter who you are, where you come from.The ability to triumph begins with
+                                you. Always.
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="newsInfo" id="news4">
+                    <div class="image">
+                        <a href="###">
+                            <img src="file:///D:/Programming/2-Applications/slider/image/Albert.png"
+                                data-src="file:///D:/Programming/2-Applications/slider/image/logo.png" alt="Albert"
+                                title="Albert" />
+                        </a>
+                    </div>
+                    <div class="label1">
+                        <h3>
+                            <a
+                                href="/story/2021/4/7/ضبط-طبيب-مزيف-بعد-إجرائه-جراحة-خاطئة-لطفلة-بالخصوص-وتزويره/5272627">
+                                A person who never made a mistake never tried anything new.
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="newsInfo" id="news5">
+                    <div class="image">
+                        <a href="###">
+                            <img src="file:///D:/Programming/2-Applications/slider/image/Actions.png"
+                                data-src="file:///D:/Programming/2-Applications/slider/image/logo.png" alt="Tom Clancy"
+                                title="Tom Clancy" />
+                        </a>
+                    </div>
+                    <div class="label1">
+                        <h3>
+                            <a href="###">
+                                Actions speak louder than words.
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div id="subNews">
+                <div class="newsLinks" id="newsLink1" onclick="showSlide(1)">
+                    <h3>Tom Clancy </h3>
+                </div>
+                <div class="newsLinks" id="newsLink2" onclick="showSlide(2)">
+                    <h3>Naval Ravikan</h3>
+                </div>
+                <div class="newsLinks" id="newsLink3" onclick="showSlide(3)">
+                    <h3>Operah Winfrey</h3>
+                </div>
+                <div class="newsLinks" id="newsLink4" onclick="showSlide(4)">
+                    <h3>Albert Einstein</h3>
+                </div>
+                <div class="newsLinks" id="newsLink5" onclick="showSlide(5)">
+                    <h3>Actions</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var sliderTimeoutID;
+        var element = 1;
+
+        function delayedSlider() {
+            element == 5 ? element = 1 : element = element;
+            element == 1 ? pElement = 4 : pElement = element - 1;
+            document.getElementById("news" + pElement).style.display = "none";
+            document.getElementById("news" + element).style.display = "block";
+            document.getElementById("newsLink" + pElement).className = "newsLinks";
+            document.getElementById("newsLink" + element).className = "newsLinks selected";
+            sliderTimeoutID = window.setTimeout(delayedSlider, 6000);
+            element++;
+        }
+
+        function showSlide(num) {
+            window.clearTimeout(sliderTimeoutID);
+            document.getElementById("news1").style.display = "none";
+            document.getElementById("news2").style.display = "none";
+            document.getElementById("news3").style.display = "none";
+            document.getElementById("news4").style.display = "none";
+            document.getElementById("news5").style.display = "none";
+            document.getElementById("newsLink1").className = "newsLinks";
+            document.getElementById("newsLink2").className = "newsLinks";
+            document.getElementById("newsLink3").className = "newsLinks";
+            document.getElementById("newsLink4").className = "newsLinks";
+            document.getElementById("newsLink5").className = "newsLinks";
+            document.getElementById("news" + num).style.display = "block";
+            document.getElementById("newsLink" + num).className = "newsLinks selected";
+            element = num + 1;
+            sliderTimeoutID = window.setTimeout(delayedSlider, 6000);
+        }
+        delayedSlider();
+    </script>
+</body>
+
+</html>

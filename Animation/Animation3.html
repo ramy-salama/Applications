@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #e8e3e3;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            color: white;
+            margin: -50px 0 0 -50px;
+            border-left-color: red;
+            border-left-color: transparent;
+
+            /* animation-name: spin; */
+            /* animation-duration: 1.5s; */
+            /* animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+            /* animation-direction: reverse; */
+            /* animation-delay: -2s; */
+            /* animation-fill-mode: forwards; */
+            /* animation-play-state: running; */
+            animation: spin 3s linear 2s infinite reverse;
+        }
+
+        @keyframes spin {
+
+            0% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: green;
+            }
+
+            100% {
+
+                background-color: blue;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .amaze              {margin:  80px;
+                     position: relative;
+                    }
+
+.amaze1,.amaze3,
+.amaze5,.amaze7,
+.amaze9,.amaze11    {width: 136.2px;
+                     height: 30px;
+                     background-color: #212121
+                    }
+
+.amaze2,
+.amaze4,.amaze6,
+.amaze8,.amaze10    {width: 30px;
+                     height: 112px;
+                     background-color: #212121;
+                    }
+
+.amaze1,.amaze11    {width: 180px;}                
+
+
+.amaze1             {margin:  90px  0 0 -45px}
+.amaze2             {margin: -112px 0 0 135px}
+.amaze3             {margin: -112px 0 0 135px}
+.amaze4             {margin: -30px  0 0 270px}
+.amaze5             {margin: -30px  0 0 270px}
+.amaze6             {margin: -112px 0 0 406px}
+.amaze7             {margin: -112px 0 0 406px}
+.amaze8             {margin: -30px  0 0 542px}
+.amaze9             {margin: -30px  0 0 542px}
+.amaze10            {margin: -112px 0 0 678px}
+.amaze11            {margin: -112px 0 0 708px}
+
+.ball               {width: 20px;
+                     height: 20px;
+                     background-color: rgb(255,255,100);
+                     border-radius: 50%;
+                     margin: 57px 0px 0 5px;
+                     position: absolute;
+                     animation: ball 8s  linear infinite;
+                    }
+
+@keyframes ball     {0%  { top: -52px;   left: -100px}
+                     10% { top: -52px;   left: 135px;}
+                     20% { top: -134px;  left: 135px;}
+                     30% { top: -134px;  left: 270px;}
+                     40% { top: -52px;   left: 270px;}
+                     50% { top: -52px;   left: 405px;}
+                     60% { top: -134px;  left: 405px;}
+                     70% { top: -134px;  left: 542px;}
+                     80% { top: -52px;   left: 542px;}
+                     90% { top: -52px;   left: 679px;}
+                     95% { top: -134px;  left: 679px;}
+                     100%{ top: -134px;  left: 900px;}
+                    }
+    </style>
+</head>
+<body>
+    <div class="amaze">
+        <div class="amaze1"></div>
+        <div class="amaze2"></div>
+        <div class="amaze3"></div>
+        <div class="amaze4"></div>
+        <div class="amaze5"></div>
+        <div class="amaze6"></div>
+        <div class="amaze7"></div>
+        <div class="amaze8"></div>
+        <div class="amaze9"></div>
+        <div class="amaze10"></div>
+        <div class="amaze11"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

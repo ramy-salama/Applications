@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        .icon {
+            color: rgb(14, 13, 13);
+            display: inline;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        h2 {
+            background: rgb(255, 255, 0);
+            color: #19191a;
+            margin-left: -20px;
+            border-radius: 30px;
+        }
+
+        .icon:hover {
+            opacity: .7;
+            color: rgb(20, 20, 19);
+        }
+
+        .hide,
+        .show {
+            text-align: center;
+            transition: all 2s ease-in-out;
+            width: 160px;
+            height: 750px;
+            line-height: 30px;
+            color: #fff;
+            background: #19191a;
+            margin: 0px 0 0 -170px;
+            opacity: .7;
+            position: absolute;
+        }
+
+        .show {
+            margin: 20px 0 0 -20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="click" class="icon">
+        <i class="fas fa-angle-double-right"></i>
+        click here
+    </div>
+    <div id="sidebar" class="hide">
+        <ul class="menu">
+            <h2>my list</h2>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+        </ul>
+
+        <ul class="menu">
+            <h2>my list</h2>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+        </ul>
+
+        <ul class="menu">
+            <h2>my list</h2>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+            <il>test programming</il>
+        </ul>
+    </div>
+    <script>
+        var myicon = document.getElementById("click"),
+            myside = document.getElementById("sidebar");
+
+        myicon.onclick = function () {
+            if (myside.classList.contains("hide")) {
+                myside.classList = "show";
+            } else {
+                myside.classList = "hide";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show {
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            border: 2px solid rgb(78, 78, 177);
+            text-align: center;
+            margin: auto;
+            border-radius: 50%;
+            line-height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="show">10</div>
+    <script>
+        var myDiv = document.getElementById('show'),
+            myTime;
+
+        function countDown() {
+            'use strict';
+            if (myDiv.textContent <= 0) {
+                myDiv.textContent = 'Done...';
+                clearInterval(myTime);
+            } else {
+                myDiv.textContent = myDiv.textContent - 1;
+            }
+        }
+        var myTime = setInterval(countDown, 1000);
+    </script>
+</body>
+
+</html>

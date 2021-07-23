@@ -1,0 +1,31 @@
+.container{
+    display: grid; /*الكونتنر لابد ياخذ دسبلاي جريد*/
+    grid-template-columns: repeat(9,1fr); /*تحديد عدد الاعمدة وحجمها وله اكثر من طريقة هذه افضلها*/
+    /* grid-template-rows: repeat(4,100px); */
+    grid-auto-rows: minmax(100px,auto); /*تحديد عدد الصفوف وحجمها وله اكثر من طريقة هذه افضلها*/
+    gap: 2%;
+    /* justify-items: center;
+    align-items: center; */ /* للتحكم في العناصر داخل الجريد راسا وافقيا*/
+}
+
+.box{
+    background: rgb(71, 146, 245);
+    text-align: center;
+}
+.box1{
+    grid-column: 1/10;
+}
+.box2{
+    grid-column: 1/10;
+}
+.box3{
+    grid-column: 2/9;
+    grid-row: 3/5;
+}
+.box4{
+    grid-column: 2/9;
+    grid-row: 5/7;
+}
+.box5{
+    grid-column: 1/10;
+}

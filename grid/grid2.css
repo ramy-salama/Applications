@@ -1,0 +1,51 @@
+.container{
+    display: grid;
+    grid-auto-rows: minmax(100px,auto);
+    grid-template-areas: 
+        "hd hd hd hd hd"
+        "sd nv nv nv nv"
+        "sd ct ct ct ct"
+        "sd ct ct ct ct"    
+        "sd ct ct ct ct"
+        "ft ft ft ft ft"
+    ;
+    gap: 2%;
+}
+
+.box{
+    background-color: rgb(126, 126, 250);
+    text-align: center;
+
+}
+
+.head{
+    grid-area: hd;
+}
+.nav{
+    grid-area: nv;
+}
+.side{
+    grid-area: sd;
+}
+.cont{
+    grid-area: ct;
+}
+.foot{
+    grid-area: ft;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

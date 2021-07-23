@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sidebar</title>
+    <title>Document</title>
     <style>
-        .icon {
-            color: rgb(14, 13, 13);
-            display: inline;
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #4d5bf9;
             cursor: pointer;
-            margin-left: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        ion-icon {
-            height: 40px;
-            width: 40px;
+        .toggle.active {
+            background: #ff4d89;
+        }
+        .toggle ion-icon {
+            position: absolute;
+            color: #fff;
+            font-size: 35px;
+            display: none;
+        }
+        .toggle ion-icon.open,
+        .toggle.active ion-icon.close {
+            display: block;
+        }
+        .toggle ion-icon.close,
+        .toggle.active ion-icon.open {
+            display: none;
         }
         h2 {
             background: rgb(255, 255, 0);
@@ -22,12 +41,7 @@
             margin-left: -20px;
             border-radius: 30px;
         }
-
-        .icon:hover {
-            opacity: .7;
-            color: rgb(20, 20, 19);
-        }
-
+        
         .hide,
         .show {
             text-align: center;
@@ -47,10 +61,10 @@
         }
     </style>
 </head>
-
 <body>
-    <div id="click" class="icon">
-        <ion-icon name="menu-outline"></ion-icon>
+    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
     </div>
     <div id="sidebar" class="hide">
         <ul class="menu">
@@ -79,47 +93,19 @@
             <il>test programming</il>
             <il>test programming</il>
             <il>test programming</il>
-            <il>test programming</il>
-            <il>test programming</il>
+
         </ul>
     </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
-        // var myicon = document.getElementById("click"),
-        //     myside = document.getElementById("sidebar");
-
-        // myicon.onclick = function () {
-        //     if (myside.classList.contains("hide")) {
-        //         myside.classList = "show";
-        //     } else {
-        //         myside.classList = "hide";
-        //     }
-        // }
-
-        // var myicon = document.querySelector("#click"),
-        //     myside = document.querySelector("#sidebar");
-
-        // myicon.onclick = function () {
-        //     myside.classList.toggle("show")
-        // };
-
-        let myicon = document.querySelector("#click"),
+        let menuToggle = document.querySelector('.toggle'),
             myside = document.querySelector("#sidebar");
-
-        myicon.onclick = () => {
-            myside.classList.toggle("show")
-        };
-
-
-        // let myicon = document.getElementById("click"),
-        //     myside = document.getElementById("sidebar");
-
-        // myicon.onclick = () => {
-        //     myside.classList.contains("hide")? myside.classList = "show" : myside.classList = "hide";
-        // }
+        menuToggle.onclick = () => {
+            menuToggle.classList.toggle('active'),
+            myside.classList.toggle("show");
+        }
     </script>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>

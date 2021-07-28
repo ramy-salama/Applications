@@ -2,7 +2,7 @@
     display: grid; /*الكونتنر لابد ياخذ دسبلاي جريد*/
     grid-template-columns: repeat(9,1fr); /*تحديد عدد الاعمدة وحجمها وله اكثر من طريقة هذه افضلها*/
     /* grid-template-rows: repeat(4,100px); */
-    grid-auto-rows: minmax(100px,auto); /*تحديد عدد الصفوف وحجمها وله اكثر من طريقة هذه افضلها*/
+    grid-auto-rows: repeat(100px,auto); /*تحديد عدد الصفوف وحجمها وله اكثر من طريقة هذه افضلها*/
     gap: 2%;
     /* justify-items: center;
     align-items: center; */ /* للتحكم في العناصر داخل الجريد راسا وافقيا*/

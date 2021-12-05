@@ -1,7 +1,6 @@
 let theInput = document.querySelector(".add-task input"),
     theAddButton = document.querySelector(".add-task .plus"),
     tasksContainer = document.querySelector(".tasks-content"),
-    noTasksMsg = document.querySelector(".no-tasks-message"),
     tasksCount = document.querySelector(".tasks-count span"),
     tasksComleted = document.querySelector(".tasks-completed span");
 
@@ -17,7 +16,13 @@ theAddButton.onclick = function () {
 
     }else {
 
-        noTasksMsg.remove();
+        let noTasksMsg = document.querySelector(".no-tasks-message");
+
+        if (document.body.contains(document.querySelector(".no-tasks-message"))) {
+
+            noTasksMsg.remove();
+
+        }
 
         let mainSpan = document.createElement("span");
 
@@ -43,6 +48,8 @@ theAddButton.onclick = function () {
 
         theInput.focus();
 
+        calculateTasks();
+
     }
 
 };
@@ -53,6 +60,12 @@ document.addEventListener('click', function (e) {
 
         e.target.parentNode.remove();
 
+        if (tasksContainer.childElementCount == 0) {
+
+            creatNoTasks();
+
+        }
+
     }
 
     if (e.target.className == 'task-box') {
@@ -61,6 +74,30 @@ document.addEventListener('click', function (e) {
 
     }
 
-
+    calculateTasks();
 
 });
+
+function creatNoTasks() {
+
+    let msgSpan = document.createElement("span");
+
+    let msgtext = document.createTextNode("No Tasks To Show");
+
+    msgSpan.appendChild(msgtext);
+
+    msgSpan.classList = 'no-tasks-message';
+
+    tasksContainer.appendChild(msgSpan)
+
+    theInput.focus();
+
+}
+
+function calculateTasks() {
+
+    tasksCount.innerHTML = document.querySelectorAll('.tasks-content .task-box').length;
+
+    tasksComleted.innerHTML = document.querySelectorAll('.tasks-content .finished').length;
+
+}

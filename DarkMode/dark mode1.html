@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <style>
+        :root {
+            --body-bg-color:#dddddd;
+            --scand-bg-color:#00ffff;
+            --text-color:#000000;
+            --layout-color:#321280;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--body-bg-color);
+            color: var(--text-color);
+        }
+        header, footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: var(--layout-color);
+            color: var(--text-color);
+            height: 70px;
+            width: 100%;
+            color: white;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .content {
+            margin: 50px auto;
+            width: 600px;
+            height: 200px;
+            background: var(--scand-bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .haid{
+            display: none;
+        }
+        .show { 
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Change Mode</h1>
+        <div>
+            <div  id="light" class="haid" >
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                </svg>
+            </div>
+            <div  id="dark" class=" show " >
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div class="content"><p> Change Mode </p></div>
+    <footer>footer</footer>
+
+    <script>
+
+        let light =  document.querySelector('#light'),
+            dark = document.querySelector('#dark');
+
+        function darkMode(){
+            document.documentElement.style.setProperty('--body-bg-color', '#121212');
+            document.documentElement.style.setProperty('--scand-bg-color', '#403b3b');
+            document.documentElement.style.setProperty('--text-color', '#ffffff');
+            document.documentElement.style.setProperty('--layout-color', '#403b3b');
+        }
+        
+        function lightMode(){ 
+            document.documentElement.style.setProperty('--body-bg-color', '#dddddd');
+            document.documentElement.style.setProperty('--scand-bg-color', '#00ffff');
+            document.documentElement.style.setProperty('--text-color', '#000000');
+            document.documentElement.style.setProperty('--layout-color', '#321280');
+        }
+
+        light.onclick = () => {
+            light.classList.remove('show'),
+            light.classList.add('haid'),
+            dark.classList.add("show")
+            lightMode()
+            }  
+            
+        dark.onclick = () => {
+            dark.classList.remove('show'),
+            dark.classList.add('haid'),
+            light.classList.add("show")
+            darkMode()
+            }   
+    </script>
+</body>
+</html>
